@@ -18,14 +18,26 @@ class GameScene: SKScene {
     let bottomEdge = -22
     let rightEdge = 1024 + 22
     
+    var gameScore: SKLabelNode!
     var score = 0 {
         didSet {
-            //your code here
+            gameScore.text = "Score: \(score)"
         }
     }
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
+    
+    func createScore() {
+        gameScore = SKLabelNode(fontNamed: "Chalkduster")
+        score = 0
+        gameScore.horizontalAlignmentMode = .left
+        gameScore.fontSize = 48
+        
+        addChild(gameScore)
+        
+        gameScore.position = CGPoint(x: 8, y: 8)
+    }
     
     @objc func launchFireworks() {
         let movementAmount: CGFloat = 1800
@@ -99,6 +111,45 @@ class GameScene: SKScene {
         addChild(node)
     }
     
+    func explode(firework: SKNode) {
+        let emitter = SKEmitterNode(fileNamed: "explode")!
+        emitter.position = firework.position
+        addChild(emitter)
+        
+        firework.removeFromParent()
+    }
+    
+    func explodeFireworks() {
+        var numExploded = 0
+        
+        for (index, fireworkContainer) in fireworks.enumerated().reversed() {
+            let firework = fireworkContainer.children[0] as! SKSpriteNode
+            
+            if firework.name == "selected" {
+                //destroy this firework
+                explode(firework: fireworkContainer)
+                fireworks.remove(at: index)
+                numExploded += 1
+            }
+        }
+        
+        switch numExploded {
+        case 0:
+            //nothing - rubbish!
+            break
+        case 1:
+            score += 200
+        case 2:
+            score += 500
+        case 3:
+            score += 1500
+        case 4:
+            score += 2500
+        default:
+            score += 4000
+        }
+    }
+    
     func checkTouches(_ touches: Set<UITouch>) {
         guard let touch = touches.first else { return }
         
@@ -131,6 +182,8 @@ class GameScene: SKScene {
         background.zPosition = -1
         addChild(background)
         
+        createScore()
+        
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
         
     }
@@ -154,4 +207,5 @@ class GameScene: SKScene {
             }
         }
     }
+    
 }
