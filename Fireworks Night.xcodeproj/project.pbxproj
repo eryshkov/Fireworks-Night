@@ -30,6 +30,7 @@
 		5C626BF121CD531B00E2A042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C626BF721CD536D00E2A042 /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
 		5C626BF821CD536D00E2A042 /* fuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fuse.sks; sourceTree = "<group>"; };
+		5C626BFC21CD626F00E2A042 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,8 @@
 		5C626BD321CD531A00E2A042 = {
 			isa = PBXGroup;
 			children = (
+				5C626BFC21CD626F00E2A042 /* README.md */,
+				5C626BFB21CD625D00E2A042 /* screens */,
 				5C626BDE21CD531A00E2A042 /* Fireworks Night */,
 				5C626BDD21CD531A00E2A042 /* Products */,
 			);
@@ -74,6 +77,13 @@
 				5C626BF121CD531B00E2A042 /* Info.plist */,
 			);
 			path = "Fireworks Night";
+			sourceTree = "<group>";
+		};
+		5C626BFB21CD625D00E2A042 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
