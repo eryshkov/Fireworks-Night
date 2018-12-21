@@ -16,6 +16,7 @@
 		5C626BF021CD531B00E2A042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C626BEE21CD531B00E2A042 /* LaunchScreen.storyboard */; };
 		5C626BF921CD536D00E2A042 /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5C626BF721CD536D00E2A042 /* explode.sks */; };
 		5C626BFA21CD536D00E2A042 /* fuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5C626BF821CD536D00E2A042 /* fuse.sks */; };
+		5C626BFE21CD76D600E2A042 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5C626BFD21CD76D600E2A042 /* 1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5C626BF721CD536D00E2A042 /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
 		5C626BF821CD536D00E2A042 /* fuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fuse.sks; sourceTree = "<group>"; };
 		5C626BFC21CD626F00E2A042 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5C626BFD21CD76D600E2A042 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		5C626BFB21CD625D00E2A042 /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				5C626BFD21CD76D600E2A042 /* 1.jpeg */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C626BFE21CD76D600E2A042 /* 1.jpeg in Resources */,
 				5C626BEB21CD531A00E2A042 /* Main.storyboard in Resources */,
 				5C626BE221CD531A00E2A042 /* GameScene.sks in Resources */,
 				5C626BED21CD531B00E2A042 /* Assets.xcassets in Resources */,
